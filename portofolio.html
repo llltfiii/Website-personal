@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Lutfi - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C;
+            --accent: #3498DB;
+            --light: #575757;
+            --dark: #2C3E50;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2e2d2d 50%, #21a6ff 100%);
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+            gap: 2rem;
+        }
+        
+        .hover-effect {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-effect:hover {
+            transform: scale(1.02);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-full">
+    <!-- Navigation -->
+    <nav class="relative w-full bg-gray bg-opacity-95 shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-primary">Muhammad <span class="text-secondary">Lutfi</span></a>
+                </div>
+                <div class="show md:flex">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="portofolio.html" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Project</a>
+                        <a href="index.html" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Tentang</a>
+                        <a href="index.html" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Keahlian</a>
+                        <a href="index.html" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Kontak</a>
+                    </div>
+                </div>
+                <div class="md:show flex md:hidden">
+                    <button class="text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Project Section -->
+    <section id="project" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-primary mb-4">Portofolio Project</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Project yang telah saya wujudkan dengan pendekatan inovatif dan perhatian terhadap detail.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-05-24-10-34-45_Enscape scene 1.jpg" alt="" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Rumah Scandinavian Minimalis</h3>
+                        <p class="text-gray-600 mb-4">Desain rumah kontemporer dengan konsep Scandinavian minimalis dan integrasi pencahayaan alami.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Malang, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-08-04-12-53-33_Enscape scene 1.png" alt="" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Kamar Mezzanine Industrial</h3>
+                        <p class="text-gray-600 mb-4">Kamar dengan konsep industrial dan integrasi cahaya alami.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Pasuruan, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-07-30-23-16-13_Scene 1.png" alt="" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Rumah Minimalis</h3>
+                        <p class="text-gray-600 mb-4">Desain rumah dengan elemen bata dengan konsep minimalis yang hangat dan nyaman.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Surabaya, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-grid mt-10">
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-04-10-13-22-57_Enscape scene 1.png" alt="" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Ruang Tamu Minimalis</h3>
+                        <p class="text-gray-600 mb-4">Desain Ruang Tamu dengan konsep minimalis.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Malang, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-04-20-02-03-21_Enscape scene 1.png" alt="" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dapur Luxury</h3>
+                        <p class="text-gray-600 mb-4">Dapur dengan konsep luxury dan penggunaan material berkualitas tinggi.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Pasuruan, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-05-30-13-39-13_Enscape scene 4.png" alt="" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Ruang Tamu Minimalis</h3>
+                        <p class="text-gray-600 mb-4">Desain Ruang Tamu dengan konsep minimalis dan penggunaan cahaya alami.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Surabaya, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>

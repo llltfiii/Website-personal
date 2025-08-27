@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Lutfi - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C;
+            --accent: #3498DB;
+            --light: #575757;
+            --dark: #2C3E50;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2e2d2d 50%, #21a6ff 100%);
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .hover-effect {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-effect:hover {
+            transform: scale(1.02);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .skill-bar {
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 8px;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 20px;
+            background: var(--secondary);
+            transition: width 1s ease-in-out;
+        }
+               .footer-gradient {
+            background: linear-gradient(135deg, #000000 0%, #4d4d4d 50%, #000000 100%);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+</html>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-primary">Muhammad <span class="text-secondary">Lutfi</span></a>
+                </div>
+                <div class="show md:flex">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="home" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="portofolio.html" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Project</a>
+                        <a href="#Tentang saya" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Tentang</a>
+                        <a href="#keahlian" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Keahlian</a>
+                        <a href="#kontak" class="text-primary hover:text-secondary px-3 py-2 text-sm font-medium">Kontak</a>
+                    </div>
+                </div>
+                <div class="md:show flex md:hidden">
+                    <button class="text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fadeInUp">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Arsitektur yang<br>Menginspirasi & Fungsional
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Menciptakan ruang yang harmonis antara estetika modern dan fungsi praktis melalui desain arsitektur yang berkelanjutan.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#project" class="bg-secondary hover:bg-red-600 text-white px-8 py-3 rounded-full font-semibold transition duration-300">
+                            Lihat Portfolio
+                        </a>
+                        <a href="#kontak" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-full font-semibold transition duration-300">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                <div class="animate-fadeInUp">
+                    <div class="w-full h-full flex items-center justify-center">
+                    <img src="asset/424428173-djqvB.jpg" alt="Portrait of Muhammad Lutfi, professional architect in modern office environment" class="rounded-x1 shadow-3x2 hover-effect">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-primary mb-4">Portofolio Project</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Project yang telah saya wujudkan dengan pendekatan inovatif dan perhatian terhadap detail.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-05-24-10-34-45_Enscape scene 1.jpg" alt="Modern minimalist house design with clean lines and natural lighting integration" class="w-full h-64 object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Rumah Scandinavian Minimalis</h3>
+                        <p class="text-gray-600 mb-4">Desain rumah kontemporer dengan konsep Scandinavian minimalis dan integrasi pencahayaan alami.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Malang, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-08-04-12-53-33_Enscape scene 1.png" alt="Sustainable office building design with green architecture and energy efficient features" class="w-full h-64 object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">KAMAR MEZZANINE INDUSTRIAL</h3>
+                        <p class="text-gray-600 mb-4">Kamar dengan konsep indusrial dan integrasi cahaya alami.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Pasuruan, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative overflow-hidden">
+                        <img src="asset/Enscape_2025-07-30-23-16-13_Scene 1.png" alt="Contemporary cafe design with industrial elements and warm lighting atmosphere" class="w-full h-64 object-cover transition duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Rumah Minimalis</h3>
+                        <p class="text-gray-600 mb-4">Desain rumah dengan elemen bata dengan konsep minimalis yang hangat dan nyaman.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Surabaya, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="portofolio.html" class="inline-flex items-center text-secondary font-semibold hover:text-red-600">
+                    Lihat Lebih Banyak Project
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="Tentang saya" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="asset/Enscape_2025-08-02-21-51-13_Scene 8.png" alt="Muhammad Lutfi working on architectural design in a modern studio space" class="rounded-xl shadow-lg hover-effect">
+                </div>
+                <div>
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-primary mb-6">Tentang Saya</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Saya Muhammad Lutfi, seorang Mahasiswa Politeknik Negeri Malang berdedikasi dengan passion dalam menciptakan desain yang menggabungkan estetika modern dengan fungsi praktis. 
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Dengan latar belakang pendidikan dan pengalaman profesional selama 3 tahun, saya telah mengerjakan berbagai proyek mulai dari exterior dan interior.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary mb-2">35+</div>
+                            <div class="text-gray-600">Proyek Selesai</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary mb-2">3+</div>
+                            <div class="text-gray-600">Tahun Pengalaman</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary mb-2">30+</div>
+                            <div class="text-gray-600">Klien Puas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary mb-2">15+</div>
+                            <div class="text-gray-600">Desain Award</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="bg-primary hover:bg-blue-800 text-white px-8 py-3 rounded-full font-semibold transition duration-300 inline-block">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="keahlian" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-primary mb-4">Keahlian</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Keterampilan dan expertise yang saya kembangkan selama karir sebagai drafter profesional.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-semibold">AutoCAD</span>
+                            <span class="text-secondary">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-semibold">3D Modeling (SketchUp, Revit)</span>
+                            <span class="text-secondary">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                <div>
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-semibold">Interior Design</span>
+                            <span class="text-secondary">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-semibold">Exterior Design</span>
+                            <span class="text-secondary">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-semibold">Client Consultation</span>
+                            <span class="text-secondary">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Footer Section -->
+    <footer class="footer-gradient text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">L</span>
+                        </div>
+                        <span class="text-xl font-bold">Muhammad</span>
+                    </div>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        Menyediakan solusi terbaik untuk kebutuhan digital Anda. 
+                        Inovasi dan kualitas adalah prioritas utama kami.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover-lift p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20">
+                            <i class="fab fa-instagram text-lg"></i>
+                        <a href="https://wa.me/082330682769" class="hover-lift p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        <a href="#lutfiii1091713@gmail.com" class="hover-lift p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20">
+                            <i class="fab fa-envelope text-lg"></i> 
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#tentang-saya" class="text-blue-100 hover:text-white hover-lift transition-colors">Tentang saya</a></li>
+                        <li><a href="portofolio.html" class="text-blue-100 hover:text-white hover-lift transition-colors">Portfolio</a></li>
+                        <li><a href="#keahlian" class="text-blue-100 hover:text-white hover-lift transition-colors">Keahlian</a></li>
+                        <li><a href="#kontak" class="text-blue-100 hover:text-white hover-lift transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div id="kontak">
+                    <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-blue-200"></i>
+                            <span class="text-blue-100 text-sm">Jl. Villa Bukit Tidar. B1 404, Malang</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-blue-200"></i>
+                            <span class="text-blue-100 text-sm">082330682769</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-200"></i>
+                            <span class="text-blue-100 text-sm">lutfiii1091713@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-300 border-opacity-30 my-8"></div>
+
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-blue-100 text-sm">
+                    © 2024 Muhammad Lutfi. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                </div>
+            </div>
+        </div>
+
+ 
